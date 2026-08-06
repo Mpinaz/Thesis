@@ -25,3 +25,8 @@ Each event is recorded by a number of stations. For each station, the catalog pr
 Based on their spatial proximity, the events can be organized into four distinct groups:
 
 ![Spatial grouping of events into four subsets](Images/SubSet_Events_3D.png)
+
+## Classification
+
+The main eruption of Klyuchevskoy volcano occurred on the $21^{st}$ of April of 2016, since then 480 events occurred in the experiment's Area and were registred by 33 differents stazions
+
