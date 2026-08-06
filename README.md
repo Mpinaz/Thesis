@@ -20,7 +20,7 @@ The following plot shows the distribution of events over the full time span:
 
 And for each station we show in the next figure which Events it recorded:
 
-![Distribution of events over the observed time span](Images/Stations_per_Event.png)
+<img src="Images/Stations_per_Event.png" alt="Logo" width="300" height="500">
 
 
 
