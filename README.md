@@ -4,15 +4,26 @@ Thesis work on the classification of pre- and post-eruption seismic events.
 
 This project uses the catalog from the KISS experiment in Kamchatka, covering the period from July 2015 to August 2016 (https://geofon.gfz.de/doi/network/X9/2015). The dataset consists of 11,209 events recorded across 77 different stations.
 
+
+
+
 ## Event Distribution
+
+The study area is located around Klyuchevskoy Volcano, where the 77 stations are distributed as shown in the following Figure 
+
+![Area](Images/Stazioni in relazione al vulcano.png)
+
 
 The following plot shows the distribution of events over the full time span:
 
 ![Distribution of events over the observed time span](Images/Number_of_Events_Over_Time.png)
 
-The spatial distribution of all recorded events is shown in the 3D plot below:
+And for each station we show in the next figure which Events it recorded:
 
-![3D plot of the location of every recorded event](Images/All_Events_3D.png)
+![Distribution of events over the observed time span](Images/Stations per Event.png)
+
+
+
 
 ## Waveforms
 
@@ -20,7 +31,25 @@ Each event is recorded by a number of stations. For each station, the catalog pr
 
 ![Waveform with P- and S-wave arrival times](Images/event_waveform.png)
 
+
+
+
+## Classification
+
+In order to compute a proper classification we have to distinguish events occured Before and After the Eruption, as we saw in the Events Distribution Figure we notice there
+aren't as many Post-Eruption events as the Pre-Eruption ones.
+
+In the next Figure we show which stations recorded Post- Eruption Events
+
+![Distribution of events over the observed time span](Images/Stazioni che hanno registrato il post eruzione.png)
+
+
+
 ## Event Grouping
+
+The spatial distribution of all recorded events is shown in the 3D plot below:
+
+![3D plot of the location of every recorded event](Images/All_Events_3D.png)
 
 Based on their spatial proximity, the events can be organized into four distinct groups:
 
