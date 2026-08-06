@@ -11,7 +11,7 @@ This project uses the catalog from the KISS experiment in Kamchatka, covering th
 
 The study area is located around Klyuchevskoy Volcano, where the 77 stations are distributed as shown in the following Figure 
 
-![Area](Images/Stazioni in relazione al vulcano.png)
+![Area](Images/Stazioni_in_relazione_al_vulcano.png)
 
 
 The following plot shows the distribution of events over the full time span:
@@ -20,7 +20,7 @@ The following plot shows the distribution of events over the full time span:
 
 And for each station we show in the next figure which Events it recorded:
 
-![Distribution of events over the observed time span](Images/Stations per Event.png)
+![Distribution of events over the observed time span](Images/Stations_per_Event.png)
 
 
 
@@ -41,7 +41,7 @@ aren't as many Post-Eruption events as the Pre-Eruption ones.
 
 In the next Figure we show which stations recorded Post- Eruption Events
 
-![Distribution of events over the observed time span](Images/Stazioni che hanno registrato il post eruzione.png)
+![Distribution of events over the observed time span](Images/Stazioni_che_hanno_registrato_il_post_eruzione.png)
 
 
 
