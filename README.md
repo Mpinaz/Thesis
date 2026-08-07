@@ -39,6 +39,8 @@ Each event is recorded by a number of stations. For each station, the catalog pr
 In order to compute a proper classification we have to distinguish events occured Before and After the Eruption, as we saw in the Events Distribution Figure we notice there
 aren't as many Post-Eruption events as the Pre-Eruption ones.
 
+The main eruption of Klyuchevskoy volcano occurred on the $21^{st}$ of April of 2016, since then 480 events occurred in the experiment's Area and were registred by 33 differents stazions
+
 In the next Figure we show which stations recorded Post- Eruption Events
 
 ![Distribution of events over the observed time span](Images/Stazioni_che_hanno_registrato_il_post_eruzione.png)
@@ -55,7 +57,5 @@ Based on their spatial proximity, the events can be organized into four distinct
 
 ![Spatial grouping of events into four subsets](Images/SubSet_Events_3D.png)
 
-## Classification
 
-The main eruption of Klyuchevskoy volcano occurred on the $21^{st}$ of April of 2016, since then 480 events occurred in the experiment's Area and were registred by 33 differents stazions
 
