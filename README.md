@@ -41,9 +41,9 @@ aren't as many Post-Eruption events as the Pre-Eruption ones.
 
 The main eruption of Klyuchevskoy volcano occurred on the $21^{st}$ of April of 2016, since then 480 events occurred in the experiment's Area and were registred by 41 differents stazions
 
-In the next Figure we show which stations recorded Post- Eruption Events
+In the next Figure we show all the stations that recorded Post-Eruption Events in blue plus the ones we are using to train the model in red
 
-![Distribution of events over the observed time span](Images/Stazioni_che_hanno_registrato_il_post_eruzione.png)
+![Distribution of events over the observed time span](Images/Stazioni_Evidenziate.png)
 
 
 ## Models
@@ -53,7 +53,7 @@ Tried two approaches to see how both models would work with the same dataset, fi
 ### Dataset
 
 The dataset we are using is formed by events gathered from March $20^{th}$ the end of the dataset which is on the end of July of the same year.
-We have almost 3000 Elements, which include The N/E/Z components, gathered from 7 different Stations (SV13, SV6, SV7, IR2, IR4, IR6).
+We have almost 3000 Elements, which include The N/E/Z components, gathered from 7 different Stations (SV13, SV6, SV7, IR2, IR3, IR4, IR6).
 
 ### Hyper Parameters
 
@@ -62,13 +62,8 @@ The Optimizer we are using is Adam and we also implemented a Scheduler to stabil
 
 ### CNN1D
 
-The first model tends to overfit quite often, so the dropout rate is higher, around 0.5.
-It never exceedes the 71% accuracy on the validation.
-
 
 
 ### CNN2D
-
-Works absolutely better than the 1D model, gets a 75% accuracy on validation set.
 
 
