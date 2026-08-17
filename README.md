@@ -62,8 +62,20 @@ The Optimizer we are using is Adam and we also implemented a Scheduler to stabil
 
 ### CNN1D
 
+Graphs for the Loss and Accuracy Values over training
 
+<img src="Images/CNN1D_ Train and Validation set during Training.png" alt="Logo" width="90%" height="100%">
+
+Confusion Matrices for Train Validation and Test sets
+
+<img src="Images/CNN1D_ Confusion Matrices.png" alt="Logo" width="90%" height="100%">
 
 ### CNN2D
 
+Graphs for the Loss and Accuracy Values over training
 
+<img src="Images/CNN2D_ Train and Validation set during Training.png" alt="Logo" width="90%" height="100%">
+
+Confusion Matrices for Train Validation and Test sets
+
+<img src="Images/CNN2D_ Confusion Matrices.png" alt="Logo" width="90%" height="100%">
