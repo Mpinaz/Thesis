@@ -79,3 +79,6 @@ Graphs for the Loss and Accuracy Values over training
 Confusion Matrices for Train Validation and Test sets
 
 <img src="Images/CNN2D_ Confusion Matrices.png" alt="Logo" width="90%" height="100%">
+
+The training over 100 epochs ends with a 70% accuracy on the test set.
+
