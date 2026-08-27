@@ -5,8 +5,6 @@ Thesis work on the classification of pre- and post-eruption seismic events.
 This project uses the catalog from the KISS experiment in Kamchatka, covering the period from July 2015 to August 2016 (https://geofon.gfz.de/doi/network/X9/2015). The dataset consists of 11,209 events recorded across 77 different stations with a sampling rate of 50Hz.
 
 
-
-
 ## Event Distribution
 
 The study area is located around Klyuchevskoy Volcano, where the 77 stations are distributed as shown in the following Figure 
@@ -24,16 +22,6 @@ And for each station we show in the next figure which Events it recorded:
 
 
 
-
-## Waveforms
-
-Each event is recorded by a number of stations. For each station, the catalog provides a waveform along with the arrival times of the P and S waves:
-
-<img src="Images/event_waveform.png" alt="Logo" width="90%" height="100%">
-
-
-
-
 ## Classification
 
 In order to compute a proper classification we have to distinguish events occured Before and After the Eruption, as we saw in the Events Distribution Figure we notice there
@@ -48,12 +36,30 @@ In the next Figure we show all the stations that recorded Post-Eruption Events i
 
 ## Models
 
-Tried two approaches to see how both models would work with the same dataset, firstly a 1D CNN analizing the waveforms, secondly a 2D CNN analizing the sepctrogram of those waves
+For the classification task, we compare two models, **CNN1D** and **CNN2D**, trained on the same dataset. 
+The first model is trained on the raw waveforms, while the second is trained on their corresponding spectrograms.
 
-### Dataset
+## Dataset
 
-The dataset we are using is formed by events gathered from March $20^{th}$ the end of the dataset which is on the end of July of the same year.
-We have almost 3000 Elements, which include The N/E/Z components, gathered from 7 different Stations (SV13, SV6, SV7, IR2, IR3, IR4, IR6).
+The dataset we use is highly imbalanced: it contains roughly **90,000 Pre-Eruption** samples and **4,600 Post-Eruption** samples. A sample refers to a specific event recorded by a specific station.ù
+in total, we have **41 stations** (all stations that recorded post-eruption as shown in the **Event Distribution** section), which recorded a combined **8,610 distinct Pre-Eruption events** and **480 Post-Eruption events**.
+
+To train the models, we take all Post-Eruption samples together with a random subset of Pre-Eruption samples, forming a balanced dataset. This dataset then is split into training, validation, and test sets following an 80/10/10 ratio.
+
+It is important to note that the splits are built by the event to avoid data leakage: all recordings of a given event are assigned to only one of the three sets (train, validation, or test).
+
+### Waveforms
+
+The CNN1D model is trained on the raw waveforms. Each sample consists of a 20 second recording sampled at 50 Hz.
+The recording window for each event starts 2 seconds before the P-wave arrival and ends 18 seconds after it. 
+
+The figure below shows an example waveform with the P and S wave arrivals marked.
+
+<img src="Images/event_waveform.png" alt="Logo" width="90%" height="100%">
+
+## Spectrogram
+
+_WIP_
 
 ### Hyper Parameters
 
