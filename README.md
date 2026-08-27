@@ -55,10 +55,7 @@ The figure below shows an example waveform with the P and S wave arrivals marked
 
 _WIP_
 
-### Hyper Parameters
-
-We are using for both models the same characteristics, a training over 100 Epochs with a Binary Cross Entropy Loss.
-The Optimizer we are using is Adam and we also implemented a Scheduler to stabilize the model's performance in the ending of the training.
+## Results
 
 ### CNN1D
 
