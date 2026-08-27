@@ -12,7 +12,7 @@ The study area is located around Klyuchevskoy Volcano, where the 77 stations are
 
 ![Area](Images/Stazioni_in_relazione_al_vulcano.png)
 
-In order to compute a proper classification we have to distinguish events occured Before and After the Eruption of interess, so we plot the distribution of events over time and mark with a line the date April $21^{st}$
+None of the recorded events have a magnitude above 3. In order to perform a proper classification, we need to distinguish between events that occurred before and after the eruption of interest. We plot the distribution of events over time and mark the date of April $21^{st}$ with a vertical line.
 
 <img src="Images/Number_of_Events_Over_Time.png" alt="Logo" width="100%" height="100%">
 
