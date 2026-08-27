@@ -14,7 +14,7 @@ The study area is located around Klyuchevskoy Volcano, where the 77 stations are
 
 In order to compute a proper classification we have to distinguish events occured Before and After the Eruption of interess, so we plot the distribution of events over time and mark with a line the date April $21^{st}$
 
-<img src="Images/Number_of_Events_Over_Time.png" alt="Logo" width="300" height="500">
+
 
 Then for each station we can see which event recorded.
 
