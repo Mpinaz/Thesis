@@ -1,39 +1,32 @@
 # Thesis
 
-Thesis work on the classification of pre- and post-eruption seismic events.
+Thesis work on the classification of pre and post eruption seismic events relative to the Klyuchevskoy volcano eruption of April $21^{st}$ 2016.
 
 This project uses the catalog from the [KISS experiment](https://geofon.gfz.de/doi/network/X9/2015) in Kamchatka recorded by the X9 network from July 2015 to August 2016. 
 The dataset consists of 11,209 events recorded across 77 different stations at a sampling rate of 50 Hz.
 
 
-## Event Distribution
+## KISS Dataset Description
 
 The study area is located around Klyuchevskoy Volcano, where the 77 stations are distributed as shown in the following Figure 
 
 ![Area](Images/Stazioni_in_relazione_al_vulcano.png)
 
-
-The following plot shows the distribution of events over the full time span:
+In order to compute a proper classification we have to distinguish events occured Before and After the Eruption of interess, so we plot the distribution of events over time and mark with a line the date April $21^{st}$
 
 ![Distribution of events over the observed time span](Images/Number_of_Events_Over_Time.png)
 
-And for each station we show in the next figure which Events it recorded:
+Then for each station we can see which event recorded.
 
 <img src="Images/Stations_per_Event.png" alt="Logo" width="300" height="500">
 
+As we can see, not all stations recorded events that occurred after the volcanic eruption: only 41 of all the 77 stations in the X9 network actually have such data.
 
+In the following figure, we highlight in blue the stations which recorded post Eruption events and in red those that did not.
 
-## Classification
+![Stations of interest](path/to/figure.png)
 
-In order to compute a proper classification we have to distinguish events occured Before and After the Eruption, as we saw in the Events Distribution Figure we notice there
-aren't as many Post-Eruption events as the Pre-Eruption ones.
-
-The main eruption of Klyuchevskoy volcano occurred on the $21^{st}$ of April of 2016, since then 480 events occurred in the experiment's Area and were registred by 41 differents stazions
-
-In the next Figure we show all the stations that recorded Post-Eruption Events in blue plus the ones we are using to train the model in red
-
-![Distribution of events over the observed time span](Images/Stazioni_Evidenziate.png)
-
+These are the stations from which we will take the data.
 
 ## Models
 
