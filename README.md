@@ -49,7 +49,7 @@ The recording window for each event starts 2 seconds before the P-wave arrival a
 
 The figure below shows an example waveform with the P and S wave arrivals marked.
 
-<img src="Images/event_waveform.png" alt="Logo" width="90%" height="100%">
+<img src="Images/event_waveform.png" alt="Logo" width="60%" height="70%">
 
 ## Spectrogram
 
