@@ -64,21 +64,25 @@ The Optimizer we are using is Adam and we also implemented a Scheduler to stabil
 
 Graphs for the Loss and Accuracy Values over training
 
-<img src="Images/CNN1D_ Train and Validation set during Training.png" alt="Logo" width="90%" height="100%">
+<img src="Images/CNN1D_ Train and Validation set during Training_latest.png" alt="Logo" width="90%" height="100%">
 
 Confusion Matrices for Train Validation and Test sets
 
-<img src="Images/CNN1D_ Confusion Matrices.png" alt="Logo" width="90%" height="100%">
+<img src="Images/CNN1D_ Confusion Matrices_latest.png" alt="Logo" width="90%" height="100%">
 
+The first model ended its training with a 82% validation accuracy and 81% test accuracy.
+Since the model tends to overfit at the end we took the best fit at the $30^{th}$ epoch.
 ### CNN2D
 
 Graphs for the Loss and Accuracy Values over training
 
-<img src="Images/CNN2D_ Train and Validation set during Training.png" alt="Logo" width="90%" height="100%">
+<img src="Images/CNN2D_ Train and Validation set during Training_latest.png" alt="Logo" width="90%" height="100%">
 
 Confusion Matrices for Train Validation and Test sets
 
-<img src="Images/CNN2D_ Confusion Matrices.png" alt="Logo" width="90%" height="100%">
+<img src="Images/CNN2D_ Confusion Matrices_latest.png" alt="Logo" width="90%" height="100%">
 
-The training over 100 epochs ends with a 70% accuracy on the test set.
+The training over 100 epochs ends with a 91% accuracy on the validation set and 90% accuracy on the test set.
+The model has a lower learning rate than the CNN1D one (CNN1D had a $10^{-3}$ while CNN2D had $10^
+{-4}$ as learning rate)
 
