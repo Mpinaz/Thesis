@@ -2,7 +2,7 @@
 
 Thesis work on the classification of pre- and post-eruption seismic events.
 
-This project uses the catalog from the KISS experiment in Kamchatka, covering the period from July 2015 to August 2016 (https://geofon.gfz.de/doi/network/X9/2015). The dataset consists of 11,209 events recorded across 77 different stations.
+This project uses the catalog from the KISS experiment in Kamchatka, covering the period from July 2015 to August 2016 (https://geofon.gfz.de/doi/network/X9/2015). The dataset consists of 11,209 events recorded across 77 different stations with a sampling rate of 50Hz.
 
 
 
