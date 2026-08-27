@@ -24,7 +24,7 @@ As we can see, not all stations recorded events that occurred after the volcanic
 
 In the following figure, we highlight in blue the stations which recorded post Eruption events and in red those that did not.
 
-<img src="Images/Post Eurption Stations.png" alt="Logo" width="100%" height="100%">
+<img src="Images/Post Eurption Stations.png" alt="Logo" width="50%" height="50%">
 
 These are the stations from which we will take the data.
 
