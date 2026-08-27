@@ -29,7 +29,7 @@ And for each station we show in the next figure which Events it recorded:
 
 Each event is recorded by a number of stations. For each station, the catalog provides a waveform along with the arrival times of the P and S waves:
 
-<img src="Images/event_waveform.png" alt="Logo" width="90%" height="100%">
+
 
 
 
