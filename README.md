@@ -92,7 +92,7 @@ The CNN1D model is trained on the raw waveforms. As defined earlier, each sample
 
 Figure 7 shows an example of a waveform given to the model.
 
-<img src="Images/Image 7 (Waveform Example).png" alt="Logo" width="60%" height="70%">
+<img src="Images/Figure 7 (Waveform Example).png" alt="Logo" width="60%" height="70%">
 
 ### 2D CNN Dataset
 
@@ -114,7 +114,7 @@ Finally, each spectrogram is standardized to zero mean and unit variance, so tha
 
 Figure 8 shows the spectrogram of the same waveform shown in Figure 7, computed as described above and given to the model.
 
-<img src="Images/Image 8 (Spectrogram Example).png" alt="Logo" width="60%" height="70%">
+<img src="Images/Figure 8 (Spectrogram Example).png" alt="Logo" width="60%" height="70%">
 
 ## Results
 
