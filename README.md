@@ -16,14 +16,16 @@ This figure shows the location of all stations, each marked as a blue triangle l
 
 For every event, the catalog provides detailed information including Latitude, Longitude, Depth, and Magnitude.
 
-<img src="Images/Figure 3 (Magnitude of all Events).png" alt="Logo" width="70%" height="90%">
-Figure 3 shows the magnitude of every event. We note that the maximum magnitude value is 3.1, while the mean magnitude is 1.
-
-In order to train a model to classify events as Pre or Post eruption, we first need to label them correctly by separating them according to their date.
-
 Figure 2 shows the distribution of events over time, marking the date of April $21^{st}$ with a vertical line.
 
 <img src="Images/Figure 2 (Number of Events Over Time).png" alt="Logo" width="70%" height="90%">
+
+Figure 3 shows the magnitude of every event.
+
+<img src="Images/Figure 3 (Magnitude of all Events).png" alt="Logo" width="70%" height="90%">
+We note that the maximum magnitude value is 3.1, while the mean magnitude is 1.
+
+In order to train a model to classify events as Pre or Post eruption, we first need to label them correctly by separating them according to their date.
 
 The catalog also includes a Phase Data section, indicating which station recorded which event.
 
