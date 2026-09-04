@@ -120,6 +120,7 @@ Figure 8 shows the spectrogram of the same waveform shown in Figure 7, computed 
 
 ## Results
 
+_Still work in Progress, this is a previous run with still good results on a balanced dataset, 50% pre samples and 50% post samples_
 ### CNN1D
 
 Graphs for the Loss and Accuracy Values over training
