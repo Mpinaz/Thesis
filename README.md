@@ -131,16 +131,15 @@ From this Matrix we can also extrapolate some useful metrics about the models' p
 - Recall (Also known as sensitivity): It measures the proportion of Post eruption events that the model correctly identifies over the total of all Post Eruption samples:
 
  $$\frac{TP}{TP + FN}\\ \text{TP stands for True positives and FN for False Negatives}$$
-
+---
 - Precision: The proportion of Post eruption events that the model correctly identifies over the sum of them plus the wrongly calssified post eruption samples:
 
 $$\frac{TP}{TP + FP}\\ \text{FP stands for False positives}$$
-
+---
 - F1 Score: The harmonic mean of precision and recall. The F1 score penalizes models that achieve a high score on one at the expense of the other. It is particularly informative for the minority class (the post eruption one), where both false positives and false negatives matter:
 
 $$F_1 = 2 \times \frac{Precision \times Recall}{Precision \times Recall}$$
-
-
+---
 - Balanced Accuracy: The average of the recall computed independently for each class. Unlike standard accuracy, it treats both classes as equally important regardless of how many samples each one contains. This makes it a much more reliable indicator of performance on our imbalanced dataset rather than a simple accuracy matric, since it rewards a model only when it classifies both pre and post-eruption events well:
 
 $$B.acc = \frac 12 (\frac{TP}{TP + FN} + \frac{TN}{TN + FP})$$
