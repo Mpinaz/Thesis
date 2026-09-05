@@ -86,7 +86,7 @@ Finally, we split this dataset into training, validation, and test sets followin
 
 It is important to note that the splits are not random either, they are built at the event level to avoid data leakage, meaning that all recordings of a given event are assigned to only one of the three sets (train, validation, or test).
 
-Figure 9 shows how the datas were split and how many datas are in each set
+Figure 7 shows how the datas were split and how many datas are in each set
 
 <img src="Images/Figure 9 (Train-Validation-Test set Splits).png" alt="Logo" width="50%" height="50%">
 The total of train samples is 11118: 66.2% Pre eruption samples and 33.8% post samples; the total of validation samples is 1446: 69% Pre eruption samples and 31% post samples; The total of train samples is 1373: 68% Pre eruption samples and 32% post samples.
