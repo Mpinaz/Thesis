@@ -120,30 +120,25 @@ Figure 8 shows the spectrogram of the same waveform shown in Figure 7, computed 
 
 ## Results
 
-_Still work in Progress, this is a previous run with still good results on a balanced dataset, 50% pre samples and 50% post samples_
-### CNN1D
+In order to understand how well the model is fitting our task, we will also use the Confusion Matrix, a 2×2 matrix (since our model can predict only two classes, pre and post eruption) where each cell contains the number of samples corresponding to a specific combination of true and predicted label.
 
-Graphs for the Loss and Accuracy Values over training
+The columns represent the actual class of the samples, while the rows represent the class predicted by the model. 
 
-<img src="Images/CNN1D_ Train and Validation set during Training_latest.png" alt="Logo" width="90%" height="100%">
+As a result, the two cells along the main diagonal count the correctly classified samples while false positives (Pre Eruption Events classified as Post ones) and False Negatives (Post Eruption Events classified as Pre ones) are located on the off-diagonal cells.
 
-Confusion Matrices for Train Validation and Test sets
+From this Matrix we can also extrapolate some useful metrics about the models' performances:
 
-<img src="Images/CNN1D_ Confusion Matrices_latest.png" alt="Logo" width="90%" height="100%">
+- Recall (Also known as sensitivity): It measures the proportion of Post eruption events that the model correctly identifies over the total of all Post Eruption samples. $$\frac{TP}{TP + FN}\\ \text{TP stands for True positives and FN for False Negatives}$$
 
-The first model ended its training with a 82% validation accuracy and 81% test accuracy.
-Since the model tends to overfit at the end we took the best fit at the $30^{th}$ epoch.
-### CNN2D
+- Precision: The proportion of Post eruption events that the model correctly identifies over the sum of them plus the wrongly calssified post eruption samples. $$\frac{TP}{TP + FP}\\ \text{FP stands for False positives}$$
 
-Graphs for the Loss and Accuracy Values over training
+- F1 Score: The harmonic mean of precision and recall. The F1 score penalizes models that achieve a high score on one at the expense of the other. It is particularly informative for the minority class (the post eruption one), where both false positives and false negatives matter. $$F_1 = 2 \times \frac{Precision \times Recall}{Precision \times Recall}$$
 
-<img src="Images/CNN2D_ Train and Validation set during Training_latest.png" alt="Logo" width="90%" height="100%">
 
-Confusion Matrices for Train Validation and Test sets
+- Balanced Accuracy: The average of the recall computed independently for each class. Unlike standard accuracy, it treats both classes as equally important regardless of how many samples each one contains. This makes it a much more reliable indicator of performance on our imbalanced dataset rather than a simple accuracy matric, since it rewards a model only when it classifies both pre and post-eruption events well.
 
-<img src="Images/CNN2D_ Confusion Matrices_latest.png" alt="Logo" width="90%" height="100%">
+$$B.acc = \frac 12 (\frac{TP}{TP + FN} + \frac{TN}{TN + FP})$$
 
-The training over 100 epochs ends with a 91% accuracy on the validation set and 90% accuracy on the test set.
-The model has a lower learning rate than the CNN1D one (CNN1D had a $10^{-3}$ while CNN2D had $10^
-{-4}$ as learning rate)
+
+
 
