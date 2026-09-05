@@ -88,7 +88,7 @@ It is important to note that the splits are not random either, they are built at
 
 Figure 9 shows how the datas were split and how many datas are in each set
 
-<img src="Images/Figure 9 (Train-Validation-Test set Splits).png" alt="Logo" width="80%" height="80%">
+<img src="Images/Figure 9 (Train-Validation-Test set Splits).png" alt="Logo" width="50%" height="50%">
 The total of train samples is 11118: 66.2% Pre eruption samples and 33.8% post samples; the total of validation samples is 1446: 69% Pre eruption samples and 31% post samples; The total of train samples is 1373: 68% Pre eruption samples and 32% post samples.
 
 Since we are training two different models, we also need to specify how the waveforms are provided to each one.
