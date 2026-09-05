@@ -97,9 +97,9 @@ Since we are training two different models, we also need to specify how the wave
 
 The CNN1D model is trained on the raw waveforms. As defined earlier, each sample consists of a 20-second recording sampled at 50 Hz, where the recording window for each event starts 2 seconds before the P-wave arrival and ends 18 seconds after it, so we have 1000 data for each sample.
 
-Figure 7 shows an example of a waveform given to the model.
+Figure 8 shows an example of a waveform given to the model.
 
-<img src="Images/Figure 7 (Waveform Example).png" alt="Logo" width="60%" height="70%">
+<img src="Images/Figure 8 (Waveform Example).png" alt="Logo" width="60%" height="70%">
 
 ### 2D CNN Dataset
 
@@ -119,9 +119,9 @@ We then take the magnitude of the resulting complex STFT coefficients and apply 
 
 Finally, each spectrogram is standardized to zero mean and unit variance, so that all inputs share a consistent scale before being fed to the network.
 
-Figure 8 shows the spectrogram of the same waveform shown in Figure 7, computed as described above and given to the model.
+Figure 9 shows the spectrogram of the same waveform shown in Figure 8, computed as described above and given to the model.
 
-<img src="Images/Figure 8 (Spectrogram Example).png" alt="Logo" width="60%" height="70%">
+<img src="Images/Figure 9 (Spectrogram Example).png" alt="Logo" width="60%" height="70%">
 
 ## Results
 
