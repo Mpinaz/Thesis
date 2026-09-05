@@ -158,6 +158,7 @@ $$B.acc = \frac 12 (\frac{TP}{TP + FN} + \frac{TN}{TN + FP})$$
 _WIP Meanwhile plots on Loss, Accuracy and f1 metric over the epochs_
 
 <img src="Images/Figure 10 (1DCNN metrics).png" alt="Logo" width="60%" height="50%">
+
 ### 2DCNN
 
 _WIP Meanwhile plots on Loss, Accuracy and f1 metric over the epochs_
