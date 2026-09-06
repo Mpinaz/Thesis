@@ -8,7 +8,7 @@ The dataset consists of 11,209 events recorded across 77 different stations at a
 
 ## KISS Dataset Description
 
-The study area is located around Klyuchevskoy Volcano, where the 77 stations are distributed as shown in [Figure 1](Images/Figure 1 (Real Map of Stations and Volcano).png).
+The study area is located around Klyuchevskoy Volcano, where the 77 stations are distributed as shown in [Figure 1](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%201%20(Real%20Map%20of%20Stations%20and%20Volcano).png).
 
 <img src="Images/Figure 1 (Real Map of Stations and Volcano).png" alt="Logo" width="70%" height="70%">
 
