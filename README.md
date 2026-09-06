@@ -8,7 +8,7 @@ The dataset consists of 11,209 events recorded across 77 different stations at a
 
 ## KISS Dataset Description
 
-The study area is located around Klyuchevskoy Volcano, where the 77 stations are distributed as shown in Figure 1.
+The study area is located around Klyuchevskoy Volcano, where the 77 stations are distributed as shown in [Figure 1](Images/Figure 1 (Real Map of Stations and Volcano).png).
 
 <img src="Images/Figure 1 (Real Map of Stations and Volcano).png" alt="Logo" width="70%" height="70%">
 
@@ -16,11 +16,11 @@ This figure shows the location of all stations, each marked as a blue triangle l
 
 For every event, the catalog provides detailed information including Latitude, Longitude, Depth, and Magnitude.
 
-Figure 2 shows the distribution of events over time, marking the date of April $21^{st}$ with a vertical line.
+[Figure 2](Images/Figure 2 (Number of Events Over Time).png) shows the distribution of events over time, marking the date of April $21^{st}$ with a vertical line.
 
 <img src="Images/Figure 2 (Number of Events Over Time).png" alt="Logo" width="70%" height="90%">
 
-Figure 3 shows the magnitude of every event.
+[Figure 3](Images/Figure 3 (Magnitude of all Events).png) shows the magnitude of every event.
 
 <img src="Images/Figure 3 (Magnitude of all Events).png" alt="Logo" width="70%" height="90%">
 We note that the maximum magnitude value is 3.1, while the mean magnitude is 1.
@@ -29,7 +29,7 @@ In order to train a model to classify events as Pre or Post eruption, we first n
 
 The catalog also includes a Phase Data section, indicating which station recorded which event.
 
-Figure 4 shows the recording coverage for each station.
+[Figure 4](Images/Figure 4 (Data Availability Plot).png) shows the recording coverage for each station.
 
 <img src="Images/Figure 4 (Data Availability Plot).png" alt="Logo" width="300" height="500">
 
@@ -37,7 +37,7 @@ In this figure, events registered by stations that also recorded Post eruption e
 
 We apply this filtering because the model might otherwise learn that recordings from a particular station always correspond to events occurring before April $21^{st}$. In that case, rather than capturing meaningful seismic features, the model would simply recognize the station and classify the input as a Pre eruption event, basing its prediction solely on the fact that the station has no Post eruption data.
 
-In Figure 5, we show the location of the selected stations.
+In [Figure 5](Images/Figure 5 (Filtered Stations).png), we show the location of the selected stations.
 
 <img src="Images/Figure 5 (Filtered Stations).png" alt="Logo" width="70%" height="70%">
 
@@ -62,7 +62,7 @@ The scheduler halves the learning rate whenever the validation accuracy begins t
 
 As shown in Figure 1, the dataset is highly unbalanced: it contains 10,729 Pre eruption events and 480 Post eruption events. 
 
-In Figure 6, we show the number of events registered for each of the selected stations.
+In [Figure 6](Images/Figure 6 (Filtered Stations Pre and Post Proportion).png), we show the number of events registered for each of the selected stations.
 
 <img src="Images/Figure 6 (Filtered Stations Pre and Post Proportion).png" alt="Logo" width="70%" height="70%">
 
@@ -86,7 +86,7 @@ Finally, we split this dataset into training, validation, and test sets followin
 
 It is important to note that the splits are not random either, they are built at the event level to avoid data leakage, meaning that all recordings of a given event are assigned to only one of the three sets (train, validation, or test).
 
-Figure 7 shows how the datas were split and how many datas are in each set
+[Figure 7](Images/Figure 7 (Train-Validation-Test set Splits).png) shows how the datas were split and how many datas are in each set
 
 <img src="Images/Figure 7 (Train-Validation-Test set Splits).png" alt="Logo" width="50%" height="50%">
 The total of train samples is 11118: 66.2% Pre eruption samples and 33.8% post samples; the total of validation samples is 1446: 69% Pre eruption samples and 31% post samples; The total of train samples is 1373: 68% Pre eruption samples and 32% post samples.
@@ -97,7 +97,7 @@ Since we are training two different models, we also need to specify how the wave
 
 The CNN1D model is trained on the raw waveforms. As defined earlier, each sample consists of a 20-second recording sampled at 50 Hz, where the recording window for each event starts 2 seconds before the P-wave arrival and ends 18 seconds after it, so we have 1000 data for each sample.
 
-Figure 8 shows an example of a waveform given to the model.
+[Figure 8](Images/Figure 8 (Waveform Example).png) shows an example of a waveform given to the model.
 
 <img src="Images/Figure 8 (Waveform Example).png" alt="Logo" width="60%" height="70%">
 
@@ -119,7 +119,7 @@ We then take the magnitude of the resulting complex STFT coefficients and apply 
 
 Finally, each spectrogram is standardized to zero mean and unit variance, so that all inputs share a consistent scale before being fed to the network.
 
-Figure 9 shows the spectrogram of the same waveform shown in Figure 8, computed as described above and given to the model.
+[Figure 9](Images/Figure 9 (Spectrogram Example).png) shows the spectrogram of the same waveform shown in Figure 8, computed as described above and given to the model.
 
 <img src="Images/Figure 9 (Spectrogram Example).png" alt="Logo" width="60%" height="70%">
 
