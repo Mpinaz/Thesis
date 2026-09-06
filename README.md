@@ -60,7 +60,7 @@ The scheduler halves the learning rate whenever the validation accuracy begins t
 
 ## Dataset
 
-As shown in Figure 1, the dataset is highly unbalanced: it contains 10,729 Pre eruption events and 480 Post eruption events. 
+As shown in [Figure 1](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%201%20(Real%20Map%20of%20Stations%20and%20Volcano).png), the dataset is highly unbalanced: it contains 10,729 Pre eruption events and 480 Post eruption events. 
 
 In [Figure 6](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%206%20(Filtered%20Stations%20Pre%20and%20Post%20Proportion).png), we show the number of events registered for each of the selected stations.
 
