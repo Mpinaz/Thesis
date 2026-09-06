@@ -47,7 +47,7 @@ After this selection, we can introduce the models and describe the dataset in de
 
 ## Models
 
-For the classification task, we compare two models, **CNN1D** and **CNN2D**, trained on the same dataset. The first model is trained on the raw waveforms, while the second is trained on their corresponding spectrograms.
+For the classification task, we compare two models, **CNN1D** and **CNN2D**, trained on the same dataset for 100 Epochs. The first model is trained on the raw waveforms, while the second is trained on their corresponding spectrograms.
 
 The criterion used to train the models is a weighted cross-entropy loss with label smoothing, since, as we will see in the next section, the dataset is highly unbalanced. 
 
@@ -155,9 +155,42 @@ $$B.acc = \frac 12 (\frac{TP}{TP + FN} + \frac{TN}{TN + FP})$$
 
 ### 1DCNN
 
-_WIP Meanwhile plots on Loss, Accuracy and f1 metric over the epochs_
+After completing the full training, we compute the evaluation metrics on the test set, a collection of samples the model has never seen (samples belonging to events that are present in neither the training nor the validation set, as previously discussed in the dataset splitting section).
 
-<img src="Images/Figure 10 (1DCNN metrics).png" alt="Logo" width="60%" height="50%">
+The training concludes with a **balanced accuracy** of $85.8%$
+
+To provide further insight into the model's fit, we report the previously discussed metrics:
+
+
+|              |   precision |   recall |   f1-score |   support |
+|:-------------|------------:|---------:|-----------:|----------:|
+| pre          |       0.928 |    0.856 |      0.891 |       931 |
+| post         |       0.739 |    0.86  |      0.795 |       442 |
+| weighted avg |       0.867 |    0.857 |      0.86  |      1373 |
+
+
+where support stands for the number of samples in each category.
+
+[Figure 10](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2010%20(1DCNN%20Confusion%20Matrices).png) shows the confusion matrix normalized over the total number of samples in each category.
+
+<img src="Images/Figure 10 (1DCNN Confusion Matrices).png" alt="Logo" width="80%" height="70%">
+
+he model overfits considerably on the training set, the high percentages of true positives and true negatives observed are achieved mainly because the model memorizes the training samples and their labels rather than learning generalizable features.
+
+This overfitting can be observed more clearly in. [Figure 11](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2011%20(1DCNN%20Loss%20and%20Accuracy%20over%20epochs).png).
+
+<img src="Images/Figure 11 (1DCNN Loss and Accuracy over epochs).png" alt="Logo" width="60%" height="50%">
+The first graph shows the values of the cross entropy loss over the epochs: after the $20^{th}$ epoch the training loss becomes significantly lower than the validation loss indicating that this is the point at which the model stops learning meaningful features and begins memorizing the training set.
+The second graph shows the accuracy over the epochs for the training and validation sets, here we can see that, despite the validation loss no longer decreasing much after the $20^{th}$ epoch, the validation accuracy still increases by small margins.
+
+Lastly [Figure 12](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2012%20(1DCNN%20Confidence%20for%20wrong%20classifications).png) shows every misclassified test event plotted on a time axis.
+<img src="Images/Figure 12 (1DCNN Confidence for wrong classifications).png" alt="Logo" width="60%" height="50%">
+False positives are shown in red and false negatives in blue. Since the model does not necessarily misclassify every sample of a given event, the y axis reports the percentage of misclassified samples out of the total number of samples for that event.
+An event appears in this graph if at least one of its samples was misclassified.
+
+For more detailed information about which events were misclassified, how many samples each event contains, how many of them were misclassified, and the corresponding percentage, please refer to this Table.
+
+[Table]()
 
 ### 2DCNN
 
