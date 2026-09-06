@@ -193,9 +193,9 @@ For more detailed information about which events were misclassified, how many sa
 
 ### 2DCNN
 
-The same work for the 1DCNN model is computed for the 2DCNN model, with the same samples and events used as test set.
+The same analysis carried out for the 1DCNN model is performed for the 2DCNN model, using the same samples and events as the test set.
 
-We obtain a signficicantly higher **Balanced Accuracy** of $93.5%$, also the evaluation metrics show the better fit
+We obtain a signficicantly higher **Balanced Accuracy** of $93.5%$, and the evaluation metrics likewise reflect the improved fit:
 
 |              |   precision |   recall |   f1-score |   support |
 |:-------------|------------:|---------:|-----------:|----------:|
@@ -207,14 +207,14 @@ We obtain a signficicantly higher **Balanced Accuracy** of $93.5%$, also the eva
 
 <img src="Images/Figure 13 (2DCNN Confusion Matrices).png" alt="Logo" width="80%" height="70%">
 
-Unfortunately the models memorizes all the training set, giving the illusion of a perfect fit while it still makes mistakes on validation and test sets, more informations
-in [Figure 14](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2014%20(2DCNN%20Loss%20and%20Accuracy%20over%20epochs).png) 
+Unfortunately, the model still memorizes the entire training set, giving the illusion of a perfect fit while continuing to make mistakes on the validation and test sets. 
+This behavior can be examined in more detail in [Figure 14](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2014%20(2DCNN%20Loss%20and%20Accuracy%20over%20epochs).png) 
 
 <img src="Images/Figure 14 (2DCNN Loss and Accuracy over epochs).png" alt="Logo" width="60%" height="50%">
-We notice that the pattern as the 1D model but this time we reach better results.
+We observe the same overfitting pattern as in the 1D model, although this time the model achieves better overall results.
 
-Finally we show the missclassifications for this model in [Figure 15](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2015%20(2DCNN%20Confidence%20for%20wrong%20classifications).png) 
+Finally, we show the misclassifications for this model in [Figure 15](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2015%20(2DCNN%20Confidence%20for%20wrong%20classifications).png) 
 
 <img src="Images/Figure 15 (2DCNN Confidence for wrong classifications).png" alt="Logo" width="60%" height="50%">
 
-More informations on this graph in this [Table](https://github.com/Mpinaz/Thesis/blob/main/Tables/Table%202%20(2DCNN%20wrong%20classifications).csv)
+Further details about this graph can be found in this [Table](https://github.com/Mpinaz/Thesis/blob/main/Tables/Table%202%20(2DCNN%20wrong%20classifications).csv)
