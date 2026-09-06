@@ -183,17 +183,38 @@ This overfitting can be observed more clearly in. [Figure 11](https://github.com
 The first graph shows the values of the cross entropy loss over the epochs: after the $20^{th}$ epoch the training loss becomes significantly lower than the validation loss indicating that this is the point at which the model stops learning meaningful features and begins memorizing the training set.
 The second graph shows the accuracy over the epochs for the training and validation sets, here we can see that, despite the validation loss no longer decreasing much after the $20^{th}$ epoch, the validation accuracy still increases by small margins.
 
+
 Lastly [Figure 12](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2012%20(1DCNN%20Confidence%20for%20wrong%20classifications).png) shows every misclassified test event plotted on a time axis.
 <img src="Images/Figure 12 (1DCNN Confidence for wrong classifications).png" alt="Logo" width="60%" height="50%">
 False positives are shown in red and false negatives in blue. Since the model does not necessarily misclassify every sample of a given event, the y axis reports the percentage of misclassified samples out of the total number of samples for that event.
 An event appears in this graph if at least one of its samples was misclassified.
 
-For more detailed information about which events were misclassified, how many samples each event contains, how many of them were misclassified, and the corresponding percentage, please refer to this Table.
-
-[Table]()
+For more detailed information about which events were misclassified, how many samples each event contains, how many of them were misclassified, and the corresponding percentage, please refer to this [Table](https://github.com/Mpinaz/Thesis/blob/main/Tables/Table%201%20(1DCNN%20wrong%20classifications).csv)
 
 ### 2DCNN
 
-_WIP Meanwhile plots on Loss, Accuracy and f1 metric over the epochs_
+The same work for the 1DCNN model is computed for the 2DCNN model, with the same samples and events used as test set.
 
-<img src="Images/Figure 11 (2DCNN metrics).png" alt="Logo" width="60%" height="50%">
+We obtain a signficicantly higher **Balanced Accuracy** of $93.5%$, also the evaluation metrics show the better fit
+
+|              |   precision |   recall |   f1-score |   support |
+|:-------------|------------:|---------:|-----------:|----------:|
+| pre          |       0.964 |    0.944 |      0.954 |       931 |
+| post         |       0.887 |    0.925 |      0.906 |       442 |
+| weighted avg |       0.939 |    0.938 |      0.938 |      1373 |
+
+[Figure 13](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2013%20(2DCNN%20Confusion%20Matrices).png) shows the normalized confusion matrix for each se.
+
+<img src="Images/Figure 13 (2DCNN Confusion Matrices).png" alt="Logo" width="80%" height="70%">
+
+Unfortunately the models memorizes all the training set, giving the illusion of a perfect fit while it still makes mistakes on validation and test sets, more informations
+in [Figure 14](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2014%20(2DCNN%20Loss%20and%20Accuracy%20over%20epochs).png) 
+
+<img src="Images/Figure 14 (2DCNN Loss and Accuracy over epochs).png" alt="Logo" width="60%" height="50%">
+We notice that the pattern as the 1D model but this time we reach better results.
+
+Finally we show the missclassifications for this model in [Figure 15](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2015%20(2DCNN%20Confidence%20for%20wrong%20classifications).png) 
+
+<img src="Images/Figure 15 (2DCNN Confidence for wrong classifications).png" alt="Logo" width="60%" height="50%">
+
+More informations on this graph in this [Table](https://github.com/Mpinaz/Thesis/blob/main/Tables/Table%202%20(2DCNN%20wrong%20classifications).csv)
