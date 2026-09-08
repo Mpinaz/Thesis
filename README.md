@@ -19,6 +19,7 @@ For every event, the catalog provides detailed information including Latitude, L
 [Figure 2](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%202%20(Number%20of%20Events%20Over%20Time%20Log%20Scale).png) shows the distribution of events over time, marking the date of April $21^{st}$ with a vertical line.
 
 <img src="Images/Figure 2 (Number of Events Over Time Log Scale).png" alt="Logo" width="70%" height="90%">
+Note the y scale is logaritmic since the dataset is unbalanced and post eruption datas would not be clearly visible, [click here](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%202%20(Number%20of%20Events%20Over%20Time).png) for a standard y scale
 
 [Figure 3](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%203%20(Magnitude%20of%20all%20Events).png) shows the magnitude of every event.
 
