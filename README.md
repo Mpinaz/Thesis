@@ -1,6 +1,6 @@
 # Thesis
 
-Thesis work on the Classification of pre and post eruption seismic events relative to the Klyuchevskoy volcano eruption of April $21^{st}$, 2016.
+Thesis work on the Classification of pre and post eruption seismic events relative to the Klyuchevskoy volcano eruption of April $3^{rd}$, 2016.
 
 This project uses the catalog from the [KISS experiment](https://geofon.gfz.de/doi/network/X9/2015) in Kamchatka, recorded by the X9 and D0 networks from July 2015 to August 2016, for this work we consider only the X9 network.
 
@@ -16,9 +16,9 @@ This figure shows the location of all stations, each marked as a blue triangle l
 
 For every event, the catalog provides detailed information including Latitude, Longitude, Depth, and Magnitude.
 
-[Figure 2](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%202%20(Number%20of%20Events%20Over%20Time).png) shows the distribution of events over time, marking the date of April $21^{st}$ with a vertical line.
+[Figure 2](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%202%20(Number%20of%20Events%20Over%20Time%20Log%20Scale).png) shows the distribution of events over time, marking the date of April $21^{st}$ with a vertical line.
 
-<img src="Images/Figure 2 (Number of Events Over Time).png" alt="Logo" width="70%" height="90%">
+<img src="Images/Figure 2 (Number of Events Over Time Log Scale).png" alt="Logo" width="70%" height="90%">
 
 [Figure 3](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%203%20(Magnitude%20of%20all%20Events).png) shows the magnitude of every event.
 
