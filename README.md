@@ -30,7 +30,7 @@ We note that the maximum magnitude value is 3.1, while the mean magnitude is 1.
 In order to train a model to classify events as Pre or Post eruption, we first need to label them correctly by separating them according to their date.
 First of all we distingish three labels for all evnets, Quiet/ Unrest and Eruption, these phases resemble the state of the volcano, with the unrest phase having similar events to the Eruption phase.
 
-
+<img src="Images/All Datas.png" alt="Logo" width="60%" height="70%">
 
 The catalog also includes a Phase Data section, indicating which station recorded which event.
 
@@ -69,7 +69,7 @@ As shown in [Figure 1](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%
 
 The the times from which we are taking the samples are shown on the following figure.
 
-
+<img src="Images/Datas Used.png" alt="Logo" width="60%" height="70%">
 
 In [Figure 6](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%206%20(Filtered%20Stations%20Pre%20and%20Post%20Proportion).png), we show the number of events registered for each of the selected stations.
 
