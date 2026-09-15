@@ -159,16 +159,16 @@ $$B.acc = \frac 12 (\frac{TP}{TP + FN} + \frac{TN}{TN + FP})$$
 
 After completing the full training, we compute the evaluation metrics on the test set, a collection of samples the model has never seen (samples belonging to events that are present in neither the training nor the validation set, as previously discussed in the dataset splitting section).
 
-The training concludes with a **balanced accuracy** of $85.8%$
+The training concludes with a **balanced accuracy** of $86%$
 
 To provide further insight into the model's fit, we report the previously discussed metrics:
 
 
 |              |   precision |   recall |   f1-score |   support |
 |:-------------|------------:|---------:|-----------:|----------:|
-| pre          |       0.928 |    0.856 |      0.891 |       931 |
-| post         |       0.739 |    0.86  |      0.795 |       442 |
-| weighted avg |       0.867 |    0.857 |      0.86  |      1373 |
+| pre          |       0.884 |    0.943 |      0.912 |      1249 |
+| post         |       0.884 |    0.777 |      0.827 |       696 |
+| weighted avg |       0.884 |    0.884 |      0.882 |      1945 |
 
 
 where support stands for the number of samples in each category.
@@ -197,13 +197,13 @@ For more detailed information about which events were misclassified, how many sa
 
 The same analysis carried out for the 1DCNN model is performed for the 2DCNN model, using the same samples and events as the test set.
 
-We obtain a signficicantly higher **Balanced Accuracy** of $93.5%$, and the evaluation metrics likewise reflect the improved fit:
+We obtain a signficicantly higher **Balanced Accuracy** of $96.5%$, and the evaluation metrics likewise reflect the improved fit:
 
 |              |   precision |   recall |   f1-score |   support |
 |:-------------|------------:|---------:|-----------:|----------:|
-| pre          |       0.964 |    0.944 |      0.954 |       931 |
-| post         |       0.887 |    0.925 |      0.906 |       442 |
-| weighted avg |       0.939 |    0.938 |      0.938 |      1373 |
+| pre          |       0.98  |    0.966 |      0.973 |      1249 |
+| post         |       0.94  |    0.964 |      0.952 |       696 |
+| weighted avg |       0.965 |    0.965 |      0.965 |      1945 |
 
 [Figure 13](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2013%20(2DCNN%20Confusion%20Matrices).png) shows the normalized confusion matrix for each se.
 
