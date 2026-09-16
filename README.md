@@ -180,7 +180,7 @@ To provide further insight into the model's fit, we report the previously discus
 
 where support stands for the number of samples in each category.
 
-[Figure 10](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2010%20(1DCNN%20Confusion%20Matrices).png) shows the confusion matrix normalized over the total number of samples in each category.
+[Figure 10](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2010%20(1DCNN%20Confusion%20Matrix).png) shows the confusion matrix normalized over the total number of samples in each category.
 
 <img src="Images/Figure 10 (1DCNN Confusion Matrix).png" alt="Logo" width="80%" height="70%">
 
@@ -188,12 +188,12 @@ he model overfits considerably on the training set, the high percentages of true
 
 This overfitting can be observed more clearly in. [Figure 11](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2011%20(1DCNN%20Loss%20and%20Accuracy%20over%20epochs).png).
 
-<img src="Images/Figure 11 (1DCNN metrics).png" alt="Logo" width="60%" height="50%">
+<img src="Images/Figure 11 (1DCNN Loss and Accuracy over epochs).png" alt="Logo" width="60%" height="50%">
 The first graph shows the values of the cross entropy loss over the epochs: after the $20^{th}$ epoch the training loss becomes significantly lower than the validation loss indicating that this is the point at which the model stops learning meaningful features and begins memorizing the training set.
 The second graph shows the accuracy over the epochs for the training and validation sets, here we can see that, despite the validation loss no longer decreasing much after the $20^{th}$ epoch, the validation accuracy still increases by small margins.
 
 
-Lastly [Figure 12](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2012%20(1DCNN%20Confidence%20for%20wrong%20classifications).png) shows every misclassified test event plotted on a time axis.
+Lastly [Figure 12](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2012%20(1DCNN%20Confidence%20Percentages).png) shows every misclassified test event plotted on a time axis.
 <img src="Images/Figure 12 (1DCNN Confidence Percentages).png" alt="Logo" width="60%" height="50%">
 False positives are shown in red and false negatives in blue. Since the model does not necessarily misclassify every sample of a given event, the y axis reports the percentage of misclassified samples out of the total number of samples for that event.
 An event appears in this graph if at least one of its samples was misclassified.
@@ -212,17 +212,17 @@ We obtain a signficicantly higher **Balanced Accuracy** of $96.5%$, and the eval
 | post         |       0.94  |    0.964 |      0.952 |       696 |
 | weighted avg |       0.965 |    0.965 |      0.965 |      1945 |
 
-[Figure 13](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2013%20(2DCNN%20Confusion%20Matrices).png) shows the normalized confusion matrix for each se.
+[Figure 13](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2013%20(2DCNN%20Confusion%20Matrix).png) shows the normalized confusion matrix for each se.
 
 <img src="Images/Figure 13 (2DCNN Confusion Matrix).png" alt="Logo" width="80%" height="70%">
 
 Unfortunately, the model still memorizes the entire training set, giving the illusion of a perfect fit while continuing to make mistakes on the validation and test sets. 
-This behavior can be examined in more detail in [Figure 14](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2014%20(2DCNN%20Loss%20and%20Accuracy%20over%20epochs).png) 
+This behavior can be examined in more detail in [Figure 14](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2014%20(2DCNN%20metrics).png) 
 
 <img src="Images/Figure 11 (2DCNN metrics).png" alt="Logo" width="60%" height="50%">
 We observe the same overfitting pattern as in the 1D model, although this time the model achieves better overall results.
 
-Finally, we show the misclassifications for this model in [Figure 15](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2015%20(2DCNN%20Confidence%20for%20wrong%20classifications).png) 
+Finally, we show the misclassifications for this model in [Figure 15](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%2015%20(2DCNN%20Confidence%20Percentages).png) 
 
 <img src="Images/Figure 15 (2DCNN Confidence Percentages).png" alt="Logo" width="60%" height="50%">
 
