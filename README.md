@@ -16,7 +16,7 @@ This figure shows the location of all stations, each marked as a blue triangle l
 
 For every event, the catalog provides detailed information including Latitude, Longitude, Depth, and Magnitude.
 
-[Figure 2](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%202%20(Number%20of%20Events%20Over%20Time%20Log%20Scale).png) shows the distribution of events over time, marking the date of April $21^{st}$ with a vertical line.
+[Figure 2](https://github.com/Mpinaz/Thesis/blob/main/Images/Figure%202%20(Number%20of%20Events%20Over%20Time%20Log%20Scale).png) shows the distribution of events over time, marking the date of April $3^{rd}$ with a vertical line.
 
 <img src="Images/Figure 2 (Number of Events Over Time Log Scale).png" alt="Logo" width="70%" height="90%">
 
