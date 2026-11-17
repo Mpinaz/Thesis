@@ -1,5 +1,8 @@
+import copy
 import torch
 import torch.nn as nn
+from tqdm.auto import tqdm
+from sklearn.metrics import balanced_accuracy_score, f1_score
 
 
 class MLP(nn.Module):
@@ -103,3 +106,78 @@ def build_model(name, config=None):
     config = config or {}
     return MODELS[name](**config)
 
+
+
+
+
+def Trainingmodel, device, Epochs, opt, crit, Train_Loader, Val_Loader, scheduler=None):
+    Metrics = {"train_loss": [], "val_loss": [],
+                 "train_acc": [], "val_acc": [],
+                 "val_bacc": [], "val_f1p": []}
+    best_val_bacc = 0.0
+    best_state = None
+    
+    
+    pbar = tqdm(range(Epochs), desc="Training")
+    for epoch in pbar:
+        model.train()
+        tot_loss, correct, total = 0.0, 0, 0
+        for x, y in Train_Loader:
+            x, y = x.to(device), y.to(device)
+    
+            opt.zero_grad()
+            out = model(x)
+            loss = crit(out, y)
+            loss.backward()
+            opt.step()
+    
+            tot_loss += loss.item() * x.size(0)
+            correct  += (out.argmax(1) == y).sum().item()
+            total    += x.size(0)
+    
+        train_loss = tot_loss / total
+        train_acc  = correct / total
+    
+        # Validation
+    
+        model.eval()
+        tot_loss, total = 0.0, 0
+        val_true, val_pred = [], []
+        with torch.no_grad():
+            for x, y in Val_Loader:
+                x, y = x.to(device), y.to(device)
+                out = model(x)
+                loss = crit(out, y)
+    
+                tot_loss += loss.item() * x.size(0)
+                total    += x.size(0)
+                val_true.append(y.cpu())
+                val_pred.append(out.argmax(1).cpu())
+    
+        val_loss = tot_loss / total
+        val_true = torch.cat(val_true).numpy()
+        val_pred = torch.cat(val_pred).numpy()
+        val_acc  = (val_true == val_pred).mean()
+        val_bacc = balanced_accuracy_score(val_true, val_pred)
+        val_f1p  = f1_score(val_true, val_pred, pos_label=1)
+    
+        scheduler.step(val_loss)   # da attivare con lo scheduler
+    
+        Metrics["train_loss"].append(train_loss)
+        Metrics["val_loss"].append(val_loss)
+        Metrics["train_acc"].append(train_acc)
+        Metrics["val_acc"].append(val_acc)
+        Metrics["val_bacc"].append(val_bacc)
+        Metrics["val_f1p"].append(val_f1p)
+    
+        if not (epoch + 1) % 25:
+              tqdm.write(f"\nEpoch {epoch+1}\ntrain_acc={train_acc:.4f} | val_acc={val_acc:.3f} | val_bacc={val_bacc:.3f} | val_f1p={val_f1p:.3f}")
+    
+        if val_bacc > best_val_bacc:
+            best_val_bacc = val_bacc
+            best_state = copy.deepcopy(model.state_dict())
+    
+    model.load_state_dict(best_state)
+    print(f"Best val balanced accuracy: {best_val_bacc:.4f}")
+
+    return model, Metrics
