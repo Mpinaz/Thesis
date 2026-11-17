@@ -97,8 +97,8 @@ MODELS = {
     "cnn2d": CNN2D}
 
 
-def build_model(name, config):
+def build_model(name, config = []):
     if name not in MODELS:
         raise ValueError(f"Modello '{name}' sconosciuto. Disponibili: {list(MODELS)}")
-    return MODELS[name](**config)
+    return MODELS[name] if name != "mlp" else MODELS[name](**config)
 
