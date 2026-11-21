@@ -110,7 +110,7 @@ def build_model(name, config=None):
 
 
 
-def Trainingmodel, device, Epochs, opt, crit, Train_Loader, Val_Loader, scheduler=None):
+def Training (model, device, Epochs, opt, crit, Train_Loader, Val_Loader, scheduler=None):
     Metrics = {"train_loss": [], "val_loss": [],
                  "train_acc": [], "val_acc": [],
                  "val_bacc": [], "val_f1p": []}
