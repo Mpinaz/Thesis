@@ -111,6 +111,7 @@ def build_model(name, config=None):
 
 
 def Training (model, device, Epochs, opt, crit, Train_Loader, Val_Loader, scheduler=None):
+    Epoch_Save = 0
     Metrics = {"train_loss": [], "val_loss": [],
                  "train_acc": [], "val_acc": [],
                  "val_bacc": [], "val_f1p": []}
@@ -174,10 +175,11 @@ def Training (model, device, Epochs, opt, crit, Train_Loader, Val_Loader, schedu
               tqdm.write(f"\nEpoch {epoch+1}\ntrain_acc={train_acc:.4f} | val_acc={val_acc:.3f} | val_bacc={val_bacc:.3f} | val_f1p={val_f1p:.3f}")
     
         if val_bacc > best_val_bacc:
+            Epoch_Save = epoch
             best_val_bacc = val_bacc
             best_state = copy.deepcopy(model.state_dict())
     
     model.load_state_dict(best_state)
-    print(f"Best val balanced accuracy: {best_val_bacc:.4f}")
+    print(f"Best val balanced accuracy: {best_val_bacc:.4f} at {Epoch_Save} Epoch")
 
     return model, Metrics
